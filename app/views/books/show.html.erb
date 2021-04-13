@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- CSSファイルの読み込み -->
+    <link rel="stylesheet" href="books.scss" />
+    <title>Bookers</title>
+  </head>
+  <body>
+    <main>
+      
+      <p class="text-detail">
+        <span class="text_bold">Title:</span>  <%= @book.title %>
+        </p>
+      <p class="text-detail">
+        <span class="text_bold">Body:</span>  <%= @book.body %>
+        </p>
+      <br />
+      <%= link_to 'Edit', edit_book_path(@book.id) %> |
+      <%= link_to 'Back', books_path %>
+    </main>
+  </body>

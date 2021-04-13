@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- CSSファイルの読み込み -->
+    <link rel="stylesheet" href="books.scss" />
+    <title>index</title>
+  </head>
+<body>
+ <header>
+  <h1>Books</h1>
+ </header>
+<main>
+ <table>
+ <thead>
+  <tr>
+   <th>Title</th>
+   <th>Body</th>
+   <th colspan="3"></th>
+  </tr>
+ </thead>
+ <tbody>
+  <% @books.each do |f|%>
+  <tr>
+   <td>
+    <p class="book-title"><%= f.title %></p>
+   </td>
+   <td>
+    <p class="book-body"><%= f.body %></p>
+   </td>
+   <td>
+    <%= link_to 'Show', book_path(f.id) %>
+   </td>
+   <td>
+    <%= link_to 'Edit', edit_book_path(f.id) %>
+   </td>
+   <td>
+    <%= link_to 'Destroy', destroy_book_path(f.id), method: :delete, "data-confirm" => "Are you sure?" %>
+   </td>
+  </tr>
+ </tbody>
+ <% end %>
+</table>
+
+
+<h1>New Title</h1>
+<%= form_with model:@book, local:true do |f|%>
+ <p>Title<br /><%= f.text_field :title %></p> 
+ <p>Body<br /><%= f.text_area :body %></p> 
+ <br>
+ <%= f.submit 'Create Book'%>
+<% end %>
+</main>
+
+</body>
