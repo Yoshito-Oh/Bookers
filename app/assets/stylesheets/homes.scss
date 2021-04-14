@@ -1,6 +1,12 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+}
 .Top_page{
   margin: 33px;
 }
@@ -18,4 +24,8 @@
 .link{
   color: gray;
   text-decoration: none;
+}
+.link:hover{
+  color: #fff;
+  background-color: black;
 }

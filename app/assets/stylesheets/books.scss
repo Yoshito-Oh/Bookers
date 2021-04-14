@@ -5,12 +5,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #333;
 }
 header{
   margin: 33px;
 }
 body{
   color: #333;
+  background-color: #fff;
 }
 
 main{
@@ -27,8 +29,16 @@ td{
 .text_bold{
   font-weight: bold;
 }
-.tbody click{
+.click{
   text-decoration: none;
+}
+.click:hover{
+  text-decoration: none;
+  color: #fff;
+  background-color: black;
+}
+#icon{
+  color: black;
 }
 .errors{
   width:450px;

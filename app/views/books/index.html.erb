@@ -29,17 +29,17 @@
     <p class="book-body"><%= f.body %></p>
    </td>
    <td>
-    <div class="click">
+    <div id="icon" class="click">
      <%= link_to 'Show', book_path(f.id) %>
     </div>
    </td>
    <td>
-    <div class="click">
+    <div id="icon" class="click">
     <%= link_to 'Edit', edit_book_path(f.id) %>
    </div>
    </td>
    <td>
-    <div class="click">
+    <div id="icon" class="click">
      <%= link_to 'Destroy', destroy_book_path(f.id), method: :delete, "data-confirm" => "Are you sure?" %>
     </div>
    </td>
